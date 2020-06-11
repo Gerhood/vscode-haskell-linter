@@ -297,7 +297,8 @@ export default class HaskellLintingProvider implements vscode.CodeActionProvider
         let severity = this._asDiagnosticSeverity(lintItem.severity);
         let message: string;
         if (lintItem.hint.toLocaleLowerCase().indexOf('parse error') === -1 ) {
-            message = this.hlintSuggestionPrefix + lintItem.hint + '. Replace with: ' + lintItem.to;
+            let actionPrefix = lintItem.hint !== 'Reduce duplication' ? 'Replace with: ' : '';
+            message = this.hlintSuggestionPrefix + lintItem.hint + '. ' + actionPrefix + lintItem.to;
         } else {
             message = this.hlintErrorPrefix + lintItem.hint;
         }
