@@ -307,10 +307,13 @@ export default class HaskellLintingProvider implements vscode.CodeActionProvider
     private static _asDiagnosticSeverity(logLevel: string): vscode.DiagnosticSeverity {
         switch (logLevel.toLowerCase()) {
             case 'suggestion':
+                return vscode.DiagnosticSeverity.Hint;
             case 'warning':
                 return vscode.DiagnosticSeverity.Warning;
-            default:
+            case 'error':
                 return vscode.DiagnosticSeverity.Error;
+            default:
+                return vscode.DiagnosticSeverity.Information;
         }
     }
 
