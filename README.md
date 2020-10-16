@@ -17,7 +17,7 @@ It expects a version of hlint >= 1.9.1 to be installed and already added to the 
 There are various options that can be configured by making changes to your user or workspace preferences.
 
 ### Lint onType or onSave
-By default the linter will lint as you type. Alternatively, set `haskell.hlint.run` to `onSave` or `never` if you want to lint only when the file is saved (works best if auto-save is on) or disable it for a workspace or entirely. 
+By default the linter will lint as you type. Alternatively, set `haskell.hlint.run` to `onSave` or `never` if you want to lint only when the file is saved (works best if auto-save is on) or disable it for a workspace or entirely.
 
 ```json
 {
@@ -26,8 +26,8 @@ By default the linter will lint as you type. Alternatively, set `haskell.hlint.r
 ```
 
 ### Hints
-By default the linter simply calls the `hlint` command without arguments. To specify a set of hints to use or a set of hints to ignore, add them to the configuration as shown below. 
- 
+By default the linter simply calls the `hlint` command without arguments. To specify a set of hints to use or a set of hints to ignore, add them to the configuration as shown below.
+
 ```json
 {
 	"haskell.hlint.hints": ["Default", "Dollar", "Generalise"],
@@ -49,11 +49,15 @@ The extension architecture is based off of the PHPValidationProvider from the bu
 
 
 ## Changelog
+__0.0.7__:
+- Open Pull Request [#32 Don't consider duplication hint for replacement](https://github.com/hoovercj/vscode-haskell-linter/pull/32)
+- Open Pull Request [#33  Match hlint and vscode log levels](https://github.com/hoovercj/vscode-haskell-linter/pull/33)
+
 __0.0.6__:
 - Fixed issue [#11 Incorrect Type in settings.json](https://github.com/hoovercj/vscode-haskell-linter/issues/11)
 
 __0.0.4__:
-- Added `hlint.ignore` configuration (Thanks to @vigoo) 
+- Added `hlint.ignore` configuration (Thanks to @vigoo)
 
 __0.0.3__:
 - Fixed bug where linting was always being performed on save

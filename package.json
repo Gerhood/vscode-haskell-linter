@@ -2,11 +2,11 @@
     "name": "haskell-linter",
     "displayName": "haskell-linter",
     "description": "An extension to use hlint in vscode",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "hoovercj",
     "icon": "images/haskell.png",
     "categories": [
-        "Languages",
+        "Programming Languages",
         "Linters"
     ],
     "license": "SEE LICENSE IN LICENSE.txt",
